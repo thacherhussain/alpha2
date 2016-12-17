@@ -1,0 +1,95 @@
+$icon-font-path: '../fonts/';
+
+// bower:scss
+@import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+// endbower
+
+$backgroundColor: #F6F6F6;
+$orange: #f28b00;
+$orangeLight: #F5A623;
+$font: 'Raleway', sans-serif;
+$fontColor: ;
+$secondaryFontColor: white;
+$grey: #333333;
+
+* {
+  font-family: $font;
+}
+.studentRow {
+  padding: 10px 10px;
+}
+.studentRow img {
+  margin: 10 auto;
+}
+.container {
+  margin: 0px;
+  padding: 0px;
+}
+
+.section {
+  padding: 20px;
+  background-color: $backgroundColor;
+
+}
+.stories {
+  background-color: $grey;
+  min-height: 200px;
+  color: $secondaryFontColor;
+}
+.scholarships {
+  background-color: white;
+}
+.scholarshipImg {
+  padding: 5px;
+}
+.fund {
+  background-color: $backgroundColor;
+}
+.body {
+  margin: 0 auto;
+  padding: 0;
+}
+.mainHeader {
+  background:url(../images/gFoundation-header-gradient.png);
+  background-size:cover;
+  min-height: 1000px;
+}
+/* Custom page footer */
+.footer {
+  padding: 100px 10px 20px 10px;
+  border-top: 1px solid #e5e5e5;
+  background-color: $orangeLight;
+  color: $secondaryFontColor;
+}
+
+.btn-custom {
+  margin-top: 10px;
+  width: 100px;
+}
+
+
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 730px;
+  }
+
+  /* Remove the padding we set earlier */
+  .header,
+  .marketing,
+  .footer {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  /* Space out the masthead */
+  .header {
+    margin-bottom: 30px;
+  }
+
+  /* Remove the bottom border on the jumbotron for visual effect */
+  .jumbotron {
+    border-bottom: 0;
+  }
+}

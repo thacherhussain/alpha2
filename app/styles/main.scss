@@ -43,6 +43,13 @@ html,body
   min-height: 1500px;
   text-align: center;
 }
+.about {
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
 .gButton {
   background-color: $button;
   color: $secondaryFontColor;
@@ -57,8 +64,26 @@ html,body
   -webkit-box-shadow: 0px 0px 1px 1px #ccc;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
   -moz-box-shadow:    0px 0px 1px 1px #ccc;  /* Firefox 3.5 - 3.6 */
   box-shadow:         0px 0px 1px 1px #ccc;  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
-  
+  border: 1px solid transparent;
+    border-top-color: transparent;
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-right-color: transparent;
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-bottom-color: transparent;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-left-color: transparent;
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-image-source: initial;
+    border-image-slice: initial;
+    border-image-width: initial;
+    border-image-outset: initial;
+    border-image-repeat: initial;
 }
+
 .section {
   padding: 20px;
   background-color: $backgroundColor;

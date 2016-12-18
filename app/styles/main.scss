@@ -5,15 +5,83 @@ $icon-font-path: '../fonts/';
 // endbower
 
 $backgroundColor: #F6F6F6;
+$backgroundColorDarker: #F8F8F8;
 $orange: #f28b00;
 $orangeLight: #F5A623;
 $font: 'Raleway', sans-serif;
-$fontColor: ;
+$fontColor: #333333;
 $secondaryFontColor: white;
 $grey: #333333;
 
+html,body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+}
 * {
   font-family: $font;
+}
+.body {
+  margin: 0 auto;
+  padding: 0;
+}
+.container {
+  margin: 0px;
+  padding: 0px;
+}
+.mainBanner {
+  margin-top: 400px;
+}
+.mainHeader {
+  background:url(../images/gFoundation-header-gradient.png);
+  background-size:cover;
+  min-height: 1500px;
+  text-align: center;
+}
+.gButton {
+  background-color: $orangeLight;
+  color: $secondaryFontColor;
+  width: 100px;
+  margin-top: 100px;
+  height: 30px;
+  border-radius: 0px;
+  -webkit-box-shadow: 0px 0px 1px 1px #ccc;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+  -moz-box-shadow:    0px 0px 1px 1px #ccc;  /* Firefox 3.5 - 3.6 */
+  box-shadow:         0px 0px 1px 1px #ccc;  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+
+}
+.section {
+  padding: 20px;
+  background-color: $backgroundColor;
+
+}
+.about {
+  background-color: white;
+  margin-top: 600px;
+  text-align: left;
+  -webkit-box-shadow: 0px 0px 3px 3px #ccc;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+  -moz-box-shadow:    0px 0px 3px 3px #ccc;  /* Firefox 3.5 - 3.6 */
+  box-shadow:         0px 0px 3px 3px #ccc;  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+}
+
+.grey {
+  padding-top: 50px;
+  background-color: $backgroundColorDarker;
+  padding-bottom: 100px;
+}
+.white {
+  padding-top: 50px;
+}
+.fund {
+  background-color: $backgroundColor;
+  padding-top: 100px;
+}
+.fund img {
+  text-align: center;
+  margin: 5px;
 }
 .studentRow {
   padding: 10px 10px;
@@ -21,75 +89,67 @@ $grey: #333333;
 .studentRow img {
   margin: 10 auto;
 }
-.container {
-  margin: 0px;
-  padding: 0px;
-}
-
-.section {
-  padding: 20px;
-  background-color: $backgroundColor;
-
-}
 .stories {
   background-color: $grey;
   min-height: 200px;
   color: $secondaryFontColor;
+  border: none;
+}
+.data {
+  background-color: $grey;
+  min-height: 300px;
+  color: $secondaryFontColor;
+  border: none;
+}
+.data img {
+  width: 500px;
 }
 .scholarships {
   background-color: white;
 }
-.scholarshipImg {
-  padding: 5px;
+.scholarships img {
+  padding-top: 5px;
 }
-.fund {
-  background-color: $backgroundColor;
-}
-.body {
-  margin: 0 auto;
-  padding: 0;
-}
-.mainHeader {
-  background:url(../images/gFoundation-header-gradient.png);
-  background-size:cover;
-  min-height: 1000px;
-}
-/* Custom page footer */
+
 .footer {
   padding: 100px 10px 20px 10px;
   border-top: 1px solid #e5e5e5;
   background-color: $orangeLight;
   color: $secondaryFontColor;
+  border: none;
 }
-
 .btn-custom {
   margin-top: 10px;
   width: 100px;
+  border-radius: 0px;
+  -webkit-box-shadow: 0px 0px 1px 1px $orange;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+  -moz-box-shadow:    0px 0px 1px 1px $orange;  /* Firefox 3.5 - 3.6 */
+  box-shadow:         0px 0px 1px 1px $orange;  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
 }
 
 
 
 /* Responsive: Portrait tablets and up */
-@media screen and (min-width: 768px) {
-  .container {
-    max-width: 730px;
-  }
-
-  /* Remove the padding we set earlier */
-  .header,
-  .marketing,
-  .footer {
-    padding-left: 0;
-    padding-right: 0;
-  }
-
-  /* Space out the masthead */
-  .header {
-    margin-bottom: 30px;
-  }
-
-  /* Remove the bottom border on the jumbotron for visual effect */
-  .jumbotron {
-    border-bottom: 0;
-  }
-}
+// @media screen and (min-width: 768px) {
+//   .container {
+//     max-width: 730px;
+//   }
+//
+//   /* Remove the padding we set earlier */
+//   .header,
+//   .marketing,
+//   .footer {
+//     padding-left: 0;
+//     padding-right: 0;
+//   }
+//
+//   /* Space out the masthead */
+//   .header {
+//     margin-bottom: 30px;
+//   }
+//
+//   /* Remove the bottom border on the jumbotron for visual effect */
+//   .jumbotron {
+//     border-bottom: 0;
+//   }
+// }

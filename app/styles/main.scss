@@ -9,7 +9,7 @@ $backgroundColorDarker: #F8F8F8;
 $orange: #f28b00;
 $orangeLight: #F5A623;
 $font: 'proxima-nova', 'Helvetica', 'Roboto', 'Arial', sans-serif;
-$fontColor: #333333;
+$fontColor: #828282;
 $secondaryFontColor: white;
 $grey: #333333;
 $button: #00A5B5;
@@ -22,10 +22,13 @@ html,body
     margin: 0px;
     padding: 0px;
     overflow-x: hidden;
+    font-size: 1rem;
+    font-weight: 300;
 }
 * {
   font-family: $font;
 }
+
 .body {
   margin: 0 auto;
   padding: 0;
@@ -57,13 +60,24 @@ html,body
   -webkit-box-shadow: 0px 0px 1px 1px #ccc;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
   -moz-box-shadow:    0px 0px 1px 1px #ccc;  /* Firefox 3.5 - 3.6 */
   box-shadow:         0px 0px 1px 1px #ccc;  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
-  
+
 }
 .section {
   padding: 20px;
   background-color: $backgroundColor;
-
 }
+
+p {
+  font-size: 1rem;
+  line-height: 1.4;
+  margin-bottom: 1rem;
+  color: $fontColor;
+}
+
+p.about {
+  padding-right: 20px
+}
+
 .about {
   background-color: white;
   margin-top: 600px;
@@ -73,13 +87,28 @@ html,body
   box-shadow:         0px 0px 3px 3px #ccc;  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
 }
 
-.grey {
-  padding-top: 50px;
-  background-color: $backgroundColorDarker;
-  padding-bottom: 100px;
+.mission {
+  padding-top: 37.5rem;
+  padding-bottom: 2.85rem;
 }
+
+.grey {
+  margin-left: 2rem;
+  margin-right: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
 .white {
   padding-top: 50px;
+}
+.thumbnail {
+    border: 0 none;
+    box-shadow: none;
+}
+.img-circle {
+  width: 100px;
+  height: auto;
 }
 .fund {
   background-color: $backgroundColor;
@@ -108,7 +137,7 @@ html,body
   border: none;
 }
 .data img {
-  width: 500px;
+  width: 300px;
 }
 .scholarships {
   background-color: white;
@@ -132,7 +161,59 @@ html,body
   -moz-box-shadow:    0px 0px 1px 1px $orange;  /* Firefox 3.5 - 3.6 */
   box-shadow:         0px 0px 1px 1px $orange;  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
 }
-
+/*------------------------------------*\
+   #HEADINGS
+\*------------------------------------*/
+h1, h2, h3, h4, h5 {
+  font-family: "museo-sans","Helvetica","Roboto","Arial",sans-serif;}
+/**
+* Heading 1
+*/
+h1 {
+  font-weight: 300;
+  font-size: 2.986rem;
+  line-height: 1.2;
+  margin: 1.2rem 0;}
+/**
+* Heading 2
+*/
+h2 {
+  font-weight: 300;
+  font-size: 2.488rem;
+  line-height: 1.2;
+  margin: 1.2rem 0;}
+/**
+* Heading 3
+*/
+h3 {
+  font-weight: 300;
+  font-size: 2.074rem;
+  line-height: 1.2;
+  margin: 1.2rem 0;}
+/**
+* Heading 4
+*/
+h4 {
+  font-weight: 300;
+  font-size: 1.2rem;
+  margin: 1rem 0;
+  text-transform: uppercase;
+  letter-spacing: 0.0625em;}
+/**
+* Heading 5
+*/
+h5 {
+  font-weight: 500;
+  font-size: 0.833rem;
+  margin: 1rem 0;
+  text-transform: uppercase;
+  letter-spacing: 0.0625em;}
+/**
+* Subheading
+*/
+.subheading {
+  font-family: "proxima-nova","Helvetica","Roboto","Arial",sans-serif;
+  font-weight: normal;}
 
 
 /* Responsive: Portrait tablets and up */

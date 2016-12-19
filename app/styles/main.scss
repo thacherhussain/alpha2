@@ -41,7 +41,8 @@ html,body
   margin-top: 400px;
 }
 .mainHeader {
-  background:url(../images/gFoundation-header-gradient.png);
+  background: linear-gradient(to bottom,rgba(0, 47, 75, 0.60),#f6f6f6), url(../images/gFoundation-header-gradient.png) center center / cover;
+  //** background:url(../images/gFoundation-header-gradient.png); **//
   background-size:cover;
   min-height: 1500px;
   text-align: center;

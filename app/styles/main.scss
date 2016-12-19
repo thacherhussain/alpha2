@@ -38,15 +38,47 @@ html,body
   padding: 0px;
 }
 .mainBanner {
-  margin-top: 400px;
+  margin-top: calc(1rem*25);
 }
+.mainImg img {
+  margin-top: calc(1rem*12);
+}
+
 .mainHeader {
-  background:url(../images/gFoundation-header-gradient.png);
-  background-size:cover;
-  min-height: 1500px;
+  background: linear-gradient(to bottom,rgba(0, 0, 0, 0.60),#f6f6f6), url(../images/gFoundation-header-gradient.png) center center / cover;
   text-align: center;
+  position: absolute;
 }
-.gButton {
+
+.gHeader {
+  position: relative;
+  //** overflow: hidden;
+//**  background-image: url(../images/gFoundation-header.jpg);
+ background: linear-gradient(to bottom,rgba(285, 285, 285, 0.40),#f6f6f6), url(../images/gFoundation-header-gradient.png) center center / cover;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-bottom: 2px;
+  text-align: center;
+//**  background-repeat:no-repeat;
+//** background-size:contain;
+//** background-position:center;
+}
+
+.gHeader >.gHeader-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;/* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(to right, rgba(0, 0, 0, .8) 0%, rgba(0, 0, 0, 0.15) 60%), -webkit-linear-gradient(to bottom, rgba(0, 0, 0, .8) 0%, rgba(0, 0, 0, 0) 40%);
+  background: -webkit-linear-gradient(left, rgba(0, 0, 0, .8) 0%, rgba(0, 0, 0, 0.15) 60%), -webkit-linear-gradient(top, rgba(0, 0, 0, .8) 0%, rgba(0, 0, 0, 0) 40%);
+  background: linear-gradient(to right, rgba(0, 0, 0, .8) 0%, rgba(0, 0, 0, 0.15) 60%), linear-gradient(to bottom, rgba(0, 0, 0, .8) 0%, rgba(0, 0, 0, 0) 40%);
+  opacity: 0.9;
+}
+
+.gbutton-primary {
   background-color: $button;
   color: $secondaryFontColor;
   width: 100px;
@@ -60,8 +92,195 @@ html,body
   -webkit-box-shadow: 0px 0px 1px 1px #ccc;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
   -moz-box-shadow:    0px 0px 1px 1px #ccc;  /* Firefox 3.5 - 3.6 */
   box-shadow:         0px 0px 1px 1px #ccc;  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
-
 }
+
+/**
+* Links
+*/
+a {
+  color: $button;
+  font-weight: 300;
+  text-decoration: none;
+  outline: 0;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;}
+a:hover, a:focus {
+  color: #00747F;
+  -webkit-transition: all 500ms ease;
+  transition: all 500ms ease;}
+.button, .button-primary, .button-secondary, .button-white, button, input[type="button"], input[type="submit"], input[type="reset"], input[type="image"] {
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;}
+.button, .button-primary, .button-secondary, .button-white, button, input[type="button"], input[type="submit"], input[type="reset"], input[type="image"] {}
+.button, .button-primary, .button-secondary, .button-white, button, input[type="button"], input[type="submit"], input[type="reset"], input[type="image"] {
+  display: inline-block;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  cursor: pointer;
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 1rem;
+  font-weight: 100;
+  text-align: center;
+  line-height: 2.5rem;
+  padding: 0 1.4rem;
+  border: 1px solid #BCBCBC;
+  border-radius: 4px;
+  background: center no-repeat;
+  color: #4A4A4A;
+  background-color: white;}
+.button:hover, .button-primary:hover, .button-secondary:hover, .button-white:hover, button:hover, input[type="button"]:hover, input[type="submit"]:hover, input[type="reset"]:hover, input[type="image"]:hover {
+  color: #FFF;
+  background-color: rgb(117, 117, 117);
+  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.1);
+  border-color: transparent;}
+.button:focus, .button:active, .button-primary:focus, .button-primary:active, .button-secondary:focus, .button-secondary:active, .button-white:focus, .button-white:active, button:focus, input[type="button"]:focus, input[type="submit"]:focus, input[type="reset"]:focus, input[type="image"]:focus, button:active, input[type="button"]:active, input[type="submit"]:active, input[type="reset"]:active, input[type="image"]:active {
+  color: #FFF;
+  background-color: rgb(65, 65, 65);}
+.button.-large, .button-primary.-large, .button-secondary.-large, .button-white.-large, button.-large, input[type="button"].-large, input[type="submit"].-large, input[type="reset"].-large, input[type="image"].-large {
+  line-height: 3rem;}
+.button.-loading, .button-primary.-loading, .button-secondary.-loading, .button-white.-loading, button.-loading, input[type="button"].-loading, input[type="submit"].-loading, input[type="reset"].-loading, input[type="image"].-loading {/*@extend %hide-text;*/
+  color: transparent;
+  background-image: url('https://s3-us-west-2.amazonaws.com/galvanize.com-dev/loader-black.svg');
+  background-size: auto 70%;}
+.button-primary {
+  color: white;
+  background-color: #00A5B5;
+  border: 1px solid transparent;}
+.button-primary:hover {
+  color: white;
+  background-color: rgb(0, 149, 163);}
+.button-primary:focus, .button-primary:active {
+  color: white;
+  background-color: rgb(0, 83, 91);}
+.button-primary.-loading {/*@extend %hide-text;*/
+  color: transparent;
+  background-image: url('https://s3-us-west-2.amazonaws.com/galvanize.com-dev/loader-white.svg');
+  background-size: auto 70%;
+  border: 1px solid transparent;}
+.button-secondary {
+  color: #00A5B5;
+  background-color: white;
+  border: 1px solid #E1E1E1;}
+.button-secondary:hover {
+  color: white;
+  background-color: rgb(0, 149, 163);
+  border: 1px solid rgb(0, 149, 163);
+  -webkit-transition: none;
+  transition: none;}
+.button-secondary:focus, .button-secondary:active {
+  color: white;
+  background-color: rgb(0, 83, 91);
+  border: 1px solid rgb(0, 83, 91);}
+.button-secondary.-loading {/*@extend %hide-text;*/
+  color: transparent;
+  background-image: url('https://s3-us-west-2.amazonaws.com/galvanize.com-dev/loader-black.svg');
+  background-size: auto 70%;}
+.button-white {
+  color: #00A5B5;
+  background-color: white;
+  border: 1px solid transparent;}
+.button-white:hover {
+  color: white;
+  background-color: rgb(0, 149, 163);
+  -webkit-transition: none;
+  transition: none;}
+.button-white:focus, .button-white:active {
+  color: #00A5B5;
+  background-color: rgb(128, 128, 128);}
+.button-white.-loading {/*@extend %hide-text;*/
+  color: transparent;
+  background-image: url('https://s3-us-west-2.amazonaws.com/galvanize.com-dev/loader-black.svg');
+  background-size: auto 70%;}
+.button-link >.svg {}
+.button-link >.svg {
+  margin-left: 3px;
+  -webkit-transition: -webkit-transform 300ms ease;
+  transition: -webkit-transform 300ms ease;
+  transition: transform 300ms ease;
+  transition: transform 300ms ease, -webkit-transform 300ms ease;}
+.button-link {
+  font-size: 1.1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;}
+.button-link:hover svg {
+  -webkit-transform: translateX(4px);
+          transform: translateX(4px);}
+.button-link-video >.video-icon {
+  margin-right: calc(1rem/2);}
+.button-link-video {
+  font-size: 1.1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;}
+.button-link-video.-center {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;}
+svg, .svg {
+  fill: currentColor;
+  width: 24px;
+  height: 24px;}
+.svg-24px {
+  width: 24px;
+  height: 24px;}
+.svg-34px {
+  width: 34px;
+  height: 34px;}
+.avatar-image {
+  width: 125px;
+  height: 125px;
+  background-image: url('https://s3-us-west-2.amazonaws.com/galvanize.com-dev/img-circle_demo.png');
+  background-size: cover;
+  display: block;
+  border-radius: 75px;
+  -webkit-border-radius: 75px;
+  -moz-border-radius: 75px;
+  margin: auto;}
+.course-image-lg {
+  text-align: center;
+  padding-right: 0;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 100%;
+  flex: 0 0 100%;}
+.course-image-lg >.icon {
+  width: 150px;}
+.course-image {
+  text-align: center;
+  padding-right: 0;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 100%;
+  flex: 0 0 100%;}
+.course-image >.icon {
+  width: 175px;}
+.loading-image {
+  text-align: center;
+  padding-right: 0;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 100%;
+  flex: 0 0 100%;}
+.loading-image >.icon {
+  width: 150px;}
+@media (min-width: 768px) {
+  .course-image-lg >.icon {
+     width: 200px;}
+  .loading-image >.icon {
+     width: 200px;}}
+
 .section {
   padding: 20px;
   background-color: $backgroundColor;
@@ -71,6 +290,7 @@ p {
   font-size: 1rem;
   line-height: 1.4;
   margin-bottom: 1rem;
+  margin-top: 1rem;
   color: $fontColor;
 }
 
@@ -79,8 +299,8 @@ p.about {
 }
 
 .about {
-  background-color: white;
-  margin-top: 600px;
+  background-color: $backgroundColor;
+  //** margin-top: 600px;
   text-align: left;
   -webkit-box-shadow: 0px 0px 3px 3px #ccc;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
   -moz-box-shadow:    0px 0px 3px 3px #ccc;  /* Firefox 3.5 - 3.6 */
